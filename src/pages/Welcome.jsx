@@ -1,18 +1,11 @@
-import React, { Component } from "react";
-import { Button } from "antd";
-import { Link } from "react-router-dom";
+import React from "react";
 
-class Welcome extends Component {
-  render() {
-    return (
-      <>
-        <p>Welcome</p>
-        <Link to="/login">
-          <Button type="primary">退出登录</Button>
-        </Link>
-      </>
-    );
-  }
+function Welcome() {
+  return (
+    <div>
+      <h2>欢迎登录系统</h2>
+    </div>
+  );
 }
 
 export default Welcome;
