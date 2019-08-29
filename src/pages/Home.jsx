@@ -39,8 +39,8 @@ class Home extends Component {
           width={250}
         >
           <div className={styles.logo}>
-            <img className={styles.logo.img} src={logo} alt="logo" />
-            <h1 styles={styles.logo.h1}>Ant Design</h1>
+            <img src={logo} alt="logo" />
+            <h1>Ant Design</h1>
           </div>
 
           <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
