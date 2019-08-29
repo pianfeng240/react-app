@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Layout, Menu, Icon, Breadcrumb, Avatar, Badge } from "antd";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Layout, Menu, Icon, Breadcrumb } from "antd";
+import { Route, Link } from "react-router-dom";
 import styles from "./home.module.less";
 import logo from "../logo.svg";
 import RightContent from "../components/GlobalHeader/RigthContent";

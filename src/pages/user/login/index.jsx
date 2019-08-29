@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Button, Row, Col, Input, Icon, Form, Checkbox } from "antd";
+import { withRouter } from "react-router-dom";
+import { Button, Input, Icon, Form, Checkbox } from "antd";
 import styles from "./index.module.less";
 import logo from "../../../logo.svg";
 
@@ -10,6 +10,7 @@ class NormalLoginForm extends Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log(values);
+        this.props.history.push("/");
       }
     });
   };
@@ -78,4 +79,4 @@ class NormalLoginForm extends Component {
 const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(
   NormalLoginForm
 );
-export default WrappedNormalLoginForm;
+export default withRouter(WrappedNormalLoginForm);
