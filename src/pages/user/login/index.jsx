@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { Button, Input, Icon, Form, Checkbox } from "antd";
 import styles from "./index.module.less";
 import logo from "../../../logo.svg";
+import request from "../../../utils/request";
 
 class NormalLoginForm extends Component {
   handleSubmit = event => {
@@ -15,6 +16,11 @@ class NormalLoginForm extends Component {
     });
   };
 
+  componentDidMount() {
+    request(`${process.env.REACT_APP_API}/user/info`).then(res => {
+      console.log(3, res);
+    });
+  }
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
